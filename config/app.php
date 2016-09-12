@@ -12,7 +12,7 @@ return [
     | any other location as required by the application or its packages.
     */
 
-    'name' => 'My Application',
+    'name' => 'Confee',
 
     /*
     |--------------------------------------------------------------------------
@@ -166,17 +166,20 @@ return [
         /*
          * Package Service Providers...
          */
+        Migrator\MigrationServiceProvider::class,
+
+        /*
+         * Domains Services Providers
+         */
+        Confee\Domains\Users\Providers\DomainServiceProvider::class,
 
         //
 
         /*
-         * Application Service Providers...
+         * Units Service Providers...
          */
-        Confee\Providers\AppServiceProvider::class,
-        // Confee\Providers\BroadcastServiceProvider::class,
-        Confee\Providers\AuthServiceProvider::class,
-        Confee\Providers\EventServiceProvider::class,
-        Confee\Providers\RouteServiceProvider::class,
+        Confee\Units\Authentication\Providers\UnitServiceProvider::class,
+
 
     ],
 

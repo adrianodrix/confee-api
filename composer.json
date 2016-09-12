@@ -1,5 +1,5 @@
 {
-    "name": "codecasts/confee-api",
+    "name": "adrianodrix/confee-api",
     "description": "Confee Conferences Hub.",
     "keywords": ["confee", "laravel"],
     "license": "MIT",
@@ -7,7 +7,8 @@
     "require": {
         "php": ">=5.6.4",
         "laravel/framework": "5.3.*",
-        "predis/predis": "^1.1"
+        "predis/predis": "^1.1",
+        "artesaos/migrator": "^1.1"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

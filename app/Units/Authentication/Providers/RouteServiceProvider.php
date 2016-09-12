@@ -1,7 +1,8 @@
 <?php
 
-namespace Confee\Providers;
+namespace Confee\Units\Authentication\Providers;
 
+use Confee\Units\Authentication\Http\Routes\Api;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 
@@ -14,7 +15,7 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    protected $namespace = 'Confee\Http\Controllers';
+    protected $namespace = 'Confee\Units\Authentication\Http\Controllers';
 
     /**
      * Define your route model bindings, pattern filters, etc.
@@ -35,28 +36,7 @@ class RouteServiceProvider extends ServiceProvider
      */
     public function map()
     {
-        $this->mapWebRoutes();
-
         $this->mapApiRoutes();
-
-        //
-    }
-
-    /**
-     * Define the "web" routes for the application.
-     *
-     * These routes all receive session state, CSRF protection, etc.
-     *
-     * @return void
-     */
-    protected function mapWebRoutes()
-    {
-        Route::group([
-            'middleware' => 'web',
-            'namespace' => $this->namespace,
-        ], function ($router) {
-            require base_path('routes/web.php');
-        });
     }
 
     /**
@@ -68,12 +48,10 @@ class RouteServiceProvider extends ServiceProvider
      */
     protected function mapApiRoutes()
     {
-        Route::group([
+        (new Api([
             'middleware' => 'api',
             'namespace' => $this->namespace,
-            'prefix' => 'api',
-        ], function ($router) {
-            require base_path('routes/api.php');
-        });
+            //'prefix' => 'api',
+        ]))->register();
     }
 }
