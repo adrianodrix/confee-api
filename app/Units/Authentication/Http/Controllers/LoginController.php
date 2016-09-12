@@ -1,8 +1,8 @@
 <?php
 
-namespace Confee\Http\Controllers\Auth;
+namespace Confee\Units\Authentication\Http\Controllers;
 
-use Confee\Http\Controllers\Controller;
+use Confee\Support\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 class LoginController extends Controller
