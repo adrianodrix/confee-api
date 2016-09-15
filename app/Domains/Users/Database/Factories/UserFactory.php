@@ -19,7 +19,7 @@ class UserFactory extends ModelFactory
 
         return [
             'name' => $this->faker->name,
-            'email' => $this->faker->safeEmail,
+            'email' => $this->faker->unique()->safeEmail,
             'password' => $password ?: $password = bcrypt('secret'),
             'remember_token' => str_random(10),
         ];

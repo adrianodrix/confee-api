@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "5ccd024a3ea34420bc8c78078853c9ee",
-    "content-hash": "6bbb14582f7cc62d5408eb543c6c655b",
+    "hash": "d7062e86ed77096a91bd9c4926bd6e55",
+    "content-hash": "8abbb88d59ee6fcf300c4e1343e7cc9c",
     "packages": [
         {
             "name": "artesaos/migrator",
@@ -39,6 +39,46 @@
             ],
             "description": "Namespaced Migrations for Laravel 5.1+",
             "time": "2016-08-25 03:36:30"
+        },
+        {
+            "name": "caouecs/laravel-lang",
+            "version": "3.0.13",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/caouecs/Laravel-lang.git",
+                "reference": "f888bf98fefd4fb3b141cc249be43d4d98e5b1c4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/caouecs/Laravel-lang/zipball/f888bf98fefd4fb3b141cc249be43d4d98e5b1c4",
+                "reference": "f888bf98fefd4fb3b141cc249be43d4d98e5b1c4",
+                "shasum": ""
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^1.10"
+            },
+            "suggest": {
+                "overtrue/laravel-lang": "Command to add languages in your project"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "caouecs",
+                    "email": "caouecs@caouecs.net"
+                }
+            ],
+            "description": "Languages for Laravel",
+            "keywords": [
+                "lang",
+                "languages",
+                "laravel",
+                "lpm"
+            ],
+            "time": "2016-09-13 06:19:37"
         },
         {
             "name": "classpreloader/classpreloader",

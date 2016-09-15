@@ -4,6 +4,7 @@ namespace Confee\Support\Database;
 
 use Faker\Generator;
 use Illuminate\Database\Eloquent\Factory;
+use Faker\Factory as FakerFactory;
 
 /**
  * Class ModelFactory
@@ -32,7 +33,7 @@ abstract class ModelFactory
     public function __construct()
     {
         $this->factory = app()->make(Factory::class);
-        $this->faker = app()->make(Generator::class);
+        $this->faker = FakerFactory::create(app()->getLocale());
     }
 
     public function define()
